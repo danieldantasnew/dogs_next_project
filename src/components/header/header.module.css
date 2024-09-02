@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  min-height: 65px;
+  justify-content: center;
+  box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.199);
+}
+
+.containerHeader {
+  flex: 1;
+}
+
+.containerHeader a:hover svg path,
+.containerHeader a:hover svg circle {
+  fill: var(--amarelo);
+  transition: .2s;
+}
+
+.login {
+  gap: .5rem;
+}
+
+.login:hover {
+  color: var(--amarelo);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.login:hover svg path {
+  fill: var(--amarelo);
+  transition: .2s;
+}
