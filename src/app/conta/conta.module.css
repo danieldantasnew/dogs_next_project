@@ -1,0 +1,11 @@
+.main {
+  justify-content: center;
+  min-height: 80dvh;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+
+.container {
+  flex: 1;
+  align-items: stretch;
+}

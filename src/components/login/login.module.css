@@ -1,0 +1,26 @@
+.login {
+  margin-top: 19dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 4rem 0;
+}
+
+.login a {
+  margin-top: 2rem;
+  color: var(--cor-fontes);
+  font-size: 1rem;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.cadastro {
+  margin-top: 4rem;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cadastro a:last-child {
+  padding: .8rem 1.4rem;
+  text-decoration: none;
+  color: var(--cor-fonte-footer);
+}

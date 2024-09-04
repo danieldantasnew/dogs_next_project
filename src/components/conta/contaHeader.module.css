@@ -1,0 +1,29 @@
+.conta ul {
+  list-style: none;
+  gap: 1rem;
+}
+
+.lista li a {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--branco-gelo);
+  display: flex;
+}
+
+.lista li :global(a.active) {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 1px 1px var(--amarelo), 0px 0px 1px 4px var(--amarelo-claro);
+  transition: .3s;
+}
+
+.lista li :global(a.active) svg path,
+.lista li :global(a.active) svg rect {
+  fill: var(--amarelo);
+  transition: .3s;
+}
+
+.lista li a:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 1px 1px var(--cor-fontes);
+  transition: .3s;
+}

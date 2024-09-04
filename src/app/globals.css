@@ -19,6 +19,17 @@ body {
   min-height: 100vh;
 }
 
+main {
+  overflow: hidden;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
 .content-space {
   max-width: 50.5rem;
   padding: 0 1rem;
@@ -35,4 +46,72 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.animationToRight {
+  transform: translateX(-30px);
+  opacity: 0;
+  animation: animationToRight .3s forwards;
+}
+
+@keyframes animationToRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-family: var(--second_type);
+  color: var(--cor-fontes);
+  font-size: 3.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+h1::before {
+  content: '';
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-color: var(--amarelo);
+  border-radius: 4px;
+  position: absolute;
+  bottom: 1.2rem;
+  left: -5px;
+  z-index: -1;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-family: var(--second_type);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 30%;
+  background-color: var(--branco-gelo);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  padding: .8rem 3rem;
+  background-color: var(--amarelo);
+  color: var(--cor-fonte-footer);
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 3px var(--amarelo-claro), 0px 0px 0px 4px var(--amarelo);
+  transition: .3s;
 }

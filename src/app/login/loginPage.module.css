@@ -1,0 +1,15 @@
+.loginPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.loginPage section:first-child {
+  max-height: 100dvh;
+}
+
+.loginPage section:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

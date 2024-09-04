@@ -1,0 +1,17 @@
+.footer {
+  background-color: var(--amarelo);
+  min-height: 11rem;
+  justify-content: center;
+}
+
+.footer > div {
+  justify-content: center;
+  gap: 1rem;
+  color: var(--cor-fonte-footer);
+  font-size: 1rem;
+}
+
+.footer svg path,
+.footer svg circle {
+  fill: var(--cor-fonte-footer);
+}

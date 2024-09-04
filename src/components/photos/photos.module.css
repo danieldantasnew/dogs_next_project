@@ -1,0 +1,53 @@
+.photos {
+  justify-content: center;
+}
+
+.photosContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.photo {
+  display: grid;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.photo:nth-child(6n+2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.photo img {
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+}
+
+.visualizacao {
+  justify-content: center;
+  gap: 4px;
+  grid-area: 1/1;
+  z-index: 100;
+  color: var(--branco-gelo);
+  display: none;
+}
+
+.photo:hover .visualizacao {
+  display: flex;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.226);
+  grid-area: 1/1;
+  z-index: 99;
+  display: none;
+}
+
+.photo:hover .modal {
+  display: block;
+}
