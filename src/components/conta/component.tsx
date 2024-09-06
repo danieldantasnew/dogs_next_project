@@ -8,6 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import styles from "./contaHeader.module.css";
+import ActionsLogOut from "@/actions/logOut";
 
 function getTitle(pathname: string) {
   switch (pathname) {
@@ -25,7 +26,10 @@ function getTitle(pathname: string) {
 export default function ContaComponent() {
   const pathname = usePathname();
 
-  React.useEffect(() => {}, [pathname]);
+  async function logOut() {
+    const logOutTrue = await ActionsLogOut();
+    if (logOutTrue) window.location.href = "/login";
+  }
 
   return (
     <div className={`${styles.conta} flex-row`}>
@@ -53,7 +57,7 @@ export default function ContaComponent() {
               <Adicionar />
             </Link>
           </li>
-          <li>
+          <li onClick={logOut}>
             <Link href={"/login"}>
               <Sair />
             </Link>
