@@ -19,3 +19,8 @@
   background-color: #ffffff;
   transition: .3s;
 }
+
+.erro {
+  color: red;
+  margin-top: .5rem;
+}

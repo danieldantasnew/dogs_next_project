@@ -27,3 +27,9 @@
   box-shadow: 0px 0px 1px 1px var(--cor-fontes);
   transition: .3s;
 }
+
+.lista li :global(a:hover ) svg path,
+.lista li :global(a:hover ) svg rect {
+  fill: var(--cor-fontes);
+  transition: .3s;
+}
