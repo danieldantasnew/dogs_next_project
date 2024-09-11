@@ -63,15 +63,33 @@ export function PHOTO_DELETE(id: string) {
   };
 }
 
-export function PASSWORD_LOST() {
+export function PASSWORD_LOST(formData: { login: string; url: string }) {
   return {
     url: API_URL + "/api/password/lost",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    },
   };
 }
 
-export function PASSWORD_RESET() {
+export function PASSWORD_RESET(body: {
+  login: string;
+  key: string;
+  password: string;
+}) {
   return {
     url: API_URL + "/api/password/reset",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
   };
 }
 

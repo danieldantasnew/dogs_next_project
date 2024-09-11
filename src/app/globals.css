@@ -21,6 +21,7 @@ body {
 
 main {
   overflow: hidden;
+  min-height: 100vh;
 }
 
 img {
@@ -112,6 +113,12 @@ h2::after {
 
 .button:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 0px 3px var(--amarelo-claro), 0px 0px 0px 4px var(--amarelo);
+  transition: .3s;
+}
+
+.buttonDisabled {
+  opacity: .4;
   box-shadow: 0px 0px 0px 3px var(--amarelo-claro), 0px 0px 0px 4px var(--amarelo);
   transition: .3s;
 }

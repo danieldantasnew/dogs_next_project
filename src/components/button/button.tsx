@@ -1,11 +1,12 @@
-type ButtonType = React.ComponentProps<"button"> & {
-  name: string;
-};
+type ButtonType = React.ComponentProps<"button">;
 
-export default function Button({ name, ...props }: ButtonType) {
+export default function Button({ children, disabled, ...props }: ButtonType) {
   return (
-    <button className="button" {...props}>
-      {name}
+    <button
+      disabled={disabled}
+      className={`button ${disabled ? "buttonDisabled" : ""}`}
+      {...props}>
+      {children}
     </button>
   );
 }
