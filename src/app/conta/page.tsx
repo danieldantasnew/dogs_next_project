@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default async function ContaPage() {
-  return <div>Forever Young</div>;
+  return <main>Forever Young</main>;
 }
